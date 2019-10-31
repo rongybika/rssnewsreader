@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Show Feed{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    {% if islogged %}
+        {% if feeds != '' %}
+            <table border="1">
+                {% for item in feeds %}
+                <tr>
+                    <td>
+                            <h2>{{ item.title }}</h2>
+                            <div{{ item.content | raw }}></div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+                <span>No Feeds to show!</span>
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

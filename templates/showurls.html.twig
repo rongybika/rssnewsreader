@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Show URLs{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    {% if islogged %}
+    <span style="color:rgb(18, 92, 8)">{{message}}</span>
+    <table style="width:50%">
+        {% for item in urls %}
+            <tr>
+                <td><a href="index.php?url=showfeed&feedurl={{ item.url|e }}">{{ item.url|e }}</a></td>
+                <td><a href="index.php?url=showurls&modify_id={{ item.id|e }}">modify</a></td>
+                <td><a href="index.php?url=showurls&delete_id={{ item.id|e }}">delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

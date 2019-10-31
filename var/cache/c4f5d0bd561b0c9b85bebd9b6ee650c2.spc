@@ -1,0 +1,1 @@
+a:3:{s:3:"url";s:43:"https://www.php.net/manual/en/pdo.query.php";s:8:"feed_url";s:37:"https://www.php.net/releases/feed.php";s:5:"build";s:14:"20191011114638";}

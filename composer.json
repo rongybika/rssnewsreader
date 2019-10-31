@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpauth/phpauth": "dev-master",
+        "simplepie/simplepie": "^1.5",
+        "twig/twig": "^2.0"
+    }
+}

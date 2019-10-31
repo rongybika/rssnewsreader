@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Add new URL{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <span style="color:red">{{message}}</span>
+    <form action="index.php?url=modifyurl" method="post">
+            <div class="container">
+            <h1>Update/Modify URL</h1>
+            <p>Please fill in this form to Update/Modify Feed URL.</p>
+            <hr>
+        
+            <label for="newurl"><b>URL</b></label>
+            <input style='width:100%' type="text" value="{{url[0]|e}}" name="new_url" required>
+
+            <input type="hidden" id="url_id" name="url_id" value="{{urlid}}">
+        
+            <button type="submit" value='submit' name='submit' class="registerbtn">Update</button>
+            </div>
+    </form>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}
